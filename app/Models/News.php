@@ -23,4 +23,13 @@ class News extends Model
         'status'
 
     ];
+
+    public function category(){
+        return $this->belongsTo(NewsCategory::class, 'category_id');
+    }
+
+    public function author(){
+        return $this->belongsTo(User::class, 'author_id');
+    }
+
 }

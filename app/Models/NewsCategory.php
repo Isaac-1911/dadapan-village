@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Notifications\Notifiable;
 
 class NewsCategory extends Model
 {
@@ -12,9 +12,14 @@ class NewsCategory extends Model
 
     protected $fillable = [
 
-    'name',
-    'slug',
+        'name',
+        'slug',
 
-];
+    ];
+
+    public function news(){
+        return $this->hasMany(News::class);
+    }
+
     
 }

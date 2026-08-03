@@ -21,5 +21,17 @@ class Product extends Model
         'thumbnail',
         'status'
 
-];
+    ];
+
+    public function sellerProfile(){
+        return $this->belongsTo(SellerProfile::class);
+    }
+
+    public function category(){
+        return $this->belongsTo(ProductCategory::class);
+    }
+
+    public function images(){
+        return $this->hasMany(ProductImage::class);
+    }
 }
