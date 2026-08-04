@@ -17,7 +17,10 @@ class Gallery extends Model
         'event_date',
         'image',
         'caption'
+    ];
 
+    protected $casts = [
+        'event_date' => 'date'
     ];
 
 }

@@ -35,7 +35,7 @@
             </div>
         </div>
 
-        <a href="#" class="admin-nav-link">
+        <a href="{{ route('admin.galleries.index') }}" class="admin-nav-link">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909M3 3.75h18v16.5H3V3.75Z" /></svg>
             <span>Galeri</span>
         </a>

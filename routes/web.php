@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
+use App\Http\Controllers\Admin\GalleryController;
 use App\Http\Controllers\Admin\NewsCategoryController;
 use App\Http\Controllers\Admin\NewsController;
 use App\Http\Controllers\Seller\DashboardController as SellerDashboardController;
@@ -35,6 +36,7 @@ Route::middleware(['auth', 'role:admin'])
         Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('dashboard');
         Route::resource('news', NewsController::class)->except(['show', 'edit']);
         Route::resource('news-categories', NewsCategoryController::class)->except(['show', 'edit']);
+        Route::resource('galleries', GalleryController::class)->except(['show', 'edit']);
     });
 
 
