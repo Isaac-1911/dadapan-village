@@ -29,9 +29,9 @@
                 <svg class="admin-nav-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" /></svg>
             </button>
             <div id="submenu-berita" class="admin-nav-submenu">
-                <a href="#" class="admin-nav-sublink">Semua Berita</a>
-                <a href="#" class="admin-nav-sublink">Kategori Berita</a>
-                <a href="#" class="admin-nav-sublink">Tambah Berita</a>
+                <a href="{{ route('admin.news.index') }}" class="admin-nav-sublink">Semua Berita</a>
+                <a href="{{ route('admin.news-categories.index') }}" class="admin-nav-sublink">Kategori Berita</a>
+                {{-- <a href="#" class="admin-nav-sublink">Tambah Berita</a> --}}
             </div>
         </div>
 

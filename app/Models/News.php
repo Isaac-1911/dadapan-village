@@ -18,10 +18,15 @@ class News extends Model
         'title',
         'slug',
         'content',
-        'thumbanil',
+        'thumbnail',
         'published_at',
         'status'
 
+    ];
+
+    protected $casts = [
+        'published_at' => 'datetime',
+        'status' => 'boolean'
     ];
 
     public function category(){

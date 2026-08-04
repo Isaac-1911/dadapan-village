@@ -28,6 +28,9 @@
                 @if (session('success'))
                     <div class="admin-alert admin-alert--success">{{ session('success') }}</div>
                 @endif
+                @if (session('error'))
+                    <div class="admin-alert admin-alert--danger">{{ session('error') }}</div>
+                @endif
                 @if (session('warning'))
                     <div class="admin-alert admin-alert--warning">{{ session('warning') }}</div>
                 @endif
@@ -37,7 +40,6 @@
         </div>
     </div>
 
-    <script src="{{ asset('js/admin/sidebar.js') }}" defer></script>
     <script src="{{ asset('js/admin/sidebar.js') }}" defer></script>
     <script src="{{ asset('js/admin/modal.js') }}" defer></script>
     @stack('scripts')
