@@ -10,6 +10,8 @@ use App\Http\Controllers\Seller\DashboardController as SellerDashboardController
 use App\Http\Controllers\Seller\ProfileController as SellerProfileController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\ProductCategoryController;
+use App\Http\Controllers\Admin\SellerController;
+use App\Http\Controllers\Admin\UserController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -44,6 +46,12 @@ Route::middleware(['auth', 'role:admin'])
         Route::resource('products', ProductController::class)->except(['show', 'edit']);
         Route::delete('products/{product}/images/{image}', [ProductController::class, 'destroyImage'])->name('products.images.destroy');
         Route::resource('product-categories', ProductCategoryController::class)->except(['show', 'create', 'edit']);
+
+        Route::resource('sellers', SellerController::class)->except(['show', 'edit']);
+        Route::patch('sellers/{seller}/toggle-status', [SellerController::class, 'toggleStatus'])->name('sellers.toggle-status');
+
+        Route::resource('users', UserController::class)->except(['show','edit']);
+        Route::patch('users/{user}/toggle-status', [UserController::class, 'toggleStatus'])->name('users.toggle-status');
     });
 
 
