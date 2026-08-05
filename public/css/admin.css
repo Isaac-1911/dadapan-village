@@ -656,3 +656,42 @@ textarea.admin-input { resize: vertical; min-height: 200px; }
 }
 .admin-empty-state svg { width: 40px; height: 40px; }
 .admin-empty-state p { font-size: 0.85rem; }
+
+/* ===PRODUCT SECTION=== */
+/* ===== BADGE WARNING (stok menipis) ===== */
+.admin-badge--warning { background: #fffbeb; color: #b45309; }
+
+/* ===== IMAGE STRIP (view modal produk) ===== */
+.admin-image-strip {
+    display: flex;
+    gap: 0.5rem;
+    overflow-x: auto;
+    margin: 0.75rem 0;
+}
+.admin-image-strip img {
+    width: 70px; height: 70px;
+    border-radius: 8px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+/* ===== IMAGE MANAGE (edit modal produk) ===== */
+.admin-image-manage {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+    gap: 0.6rem;
+}
+.admin-image-manage__item { position: relative; }
+.admin-image-manage__item img {
+    width: 100%; aspect-ratio: 1; border-radius: 8px; object-fit: cover;
+}
+.admin-image-manage__remove {
+    position: absolute; top: -6px; right: -6px;
+    width: 20px; height: 20px;
+    border-radius: 50%;
+    background: #dc2626; color: #fff;
+    border: 2px solid #fff;
+    font-size: 0.75rem;
+    line-height: 1;
+    cursor: pointer;
+}

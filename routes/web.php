@@ -8,6 +8,8 @@ use App\Http\Controllers\Admin\NewsCategoryController;
 use App\Http\Controllers\Admin\NewsController;
 use App\Http\Controllers\Seller\DashboardController as SellerDashboardController;
 use App\Http\Controllers\Seller\ProfileController as SellerProfileController;
+use App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\Admin\ProductCategoryController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -33,10 +35,15 @@ Route::middleware(['auth', 'role:admin'])
     ->prefix('admin')
     ->name('admin.')
     ->group(function () {
+        Route::get('/', fn () => redirect('dashboard'));
         Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('dashboard');
         Route::resource('news', NewsController::class)->except(['show', 'edit']);
         Route::resource('news-categories', NewsCategoryController::class)->except(['show', 'edit']);
         Route::resource('galleries', GalleryController::class)->except(['show', 'edit']);
+
+        Route::resource('products', ProductController::class)->except(['show', 'edit']);
+        Route::delete('products/{product}/images/{image}', [ProductController::class, 'destroyImage'])->name('products.images.destroy');
+        Route::resource('product-categories', ProductCategoryController::class)->except(['show', 'create', 'edit']);
     });
 
 
