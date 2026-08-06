@@ -798,3 +798,62 @@ textarea.admin-input { resize: vertical; min-height: 200px; }
 }
 .admin-quick-action svg { width: 22px; height: 22px; color: var(--admin-primary); }
 .admin-quick-action:hover { background: var(--admin-primary-light); border-color: var(--admin-primary); }
+
+/* ===== AUTH LAYOUT ===== */
+.admin-auth-body {
+    background: linear-gradient(160deg, #f0fdfa 0%, #f8fafc 60%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    padding: 1.5rem;
+}
+.admin-auth-wrap { width: 100%; max-width: 420px; display: flex; flex-direction: column; align-items: center; gap: 1.25rem; }
+.admin-auth-card {
+    width: 100%;
+    background: #fff;
+    border: 1px solid var(--admin-border);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 20px 40px rgba(15, 118, 110, 0.08);
+}
+.admin-auth-brand { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.75rem; }
+.admin-auth-brand__logo { width: 42px; height: 42px; font-size: 1.1rem; }
+.admin-auth-brand__title { display: block; font-weight: 700; font-size: 1rem; color: #111827; }
+.admin-auth-brand__subtitle { display: block; font-size: 0.75rem; color: #9ca3af; }
+.admin-auth-title { font-size: 1.25rem; font-weight: 700; color: #111827; }
+.admin-auth-subtitle { font-size: 0.83rem; color: #6b7280; margin: 0.25rem 0 1.5rem; }
+.admin-form-error { font-size: 0.72rem; color: #dc2626; margin-top: 0.3rem; }
+.admin-auth-row { display: flex; align-items: center; justify-content: space-between; margin: 0.75rem 0 1.25rem; font-size: 0.8rem; }
+.admin-checkbox { display: flex; align-items: center; gap: 0.4rem; color: #4b5563; cursor: pointer; }
+.admin-checkbox input { accent-color: var(--admin-primary); width: 15px; height: 15px; }
+.admin-auth-link { color: var(--admin-primary); font-weight: 600; text-decoration: none; }
+.admin-auth-link:hover { text-decoration: underline; }
+.admin-auth-footer { font-size: 0.75rem; color: #9ca3af; }
+
+/* ===== PAGINATION NAV ===== */
+.admin-pagination-nav { display: flex; align-items: center; justify-content: center; gap: 0.4rem; margin-top: 1rem; }
+.admin-pagination-btn {
+    width: 34px; height: 34px;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 8px;
+    border: 1px solid var(--admin-border);
+    color: #4b5563;
+    text-decoration: none;
+}
+.admin-pagination-btn svg { width: 16px; height: 16px; }
+.admin-pagination-btn:hover { background: #f3f4f6; }
+.admin-pagination-btn--disabled { opacity: 0.4; pointer-events: none; }
+.admin-pagination-pages { display: flex; gap: 0.3rem; }
+.admin-pagination-page {
+    min-width: 34px; height: 34px;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 8px;
+    font-size: 0.82rem;
+    color: #4b5563;
+    text-decoration: none;
+}
+.admin-pagination-page:hover { background: #f3f4f6; }
+.admin-pagination-page--active { background: var(--admin-primary); color: #fff; font-weight: 600; }
+.admin-pagination-ellipsis { padding: 0 0.3rem; color: #9ca3af; }
