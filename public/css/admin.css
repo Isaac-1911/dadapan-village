@@ -857,3 +857,85 @@ textarea.admin-input { resize: vertical; min-height: 200px; }
 .admin-pagination-page:hover { background: #f3f4f6; }
 .admin-pagination-page--active { background: var(--admin-primary); color: #fff; font-weight: 600; }
 .admin-pagination-ellipsis { padding: 0 0.3rem; color: #9ca3af; }
+
+
+
+
+
+
+/* ============ SELLER SECTION ============ */
+/* ===== SELLER: BRAND SUBTITLE ACCENT ===== */
+.admin-sidebar__brand-subtitle--accent { color: var(--admin-primary); font-weight: 600; }
+.admin-sidebar__logo svg { width: 20px; height: 20px; }
+
+/* ===== SELLER: TOPBAR PAGE TITLE (pengganti breadcrumb) ===== */
+.admin-topbar__page-title { font-size: 1rem; font-weight: 700; color: #111827; }
+
+/* ===== SELLER: PROFILE CARD DI SIDEBAR FOOTER ===== */
+.admin-sidebar__profile-card {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.6rem;
+    border-radius: 10px;
+    background: #f8fafc;
+    margin-bottom: 0.6rem;
+}
+.admin-sidebar__profile-info { display: flex; flex-direction: column; line-height: 1.25; overflow: hidden; }
+.admin-sidebar__profile-name {
+    font-size: 0.8rem; font-weight: 600; color: #111827;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.admin-sidebar__profile-role { font-size: 0.7rem; color: #9ca3af; }
+
+/* ===== SELLER HERO BANNER ===== */
+.seller-hero {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #0f766e 0%, #115e59 100%);
+    border-radius: 14px;
+    padding: 2rem;
+    color: #fff;
+    margin-bottom: 1.5rem;
+}
+.seller-hero::after {
+    content: '';
+    position: absolute;
+    top: -40px; right: -40px;
+    width: 220px; height: 220px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.06);
+}
+.seller-hero__eyebrow {
+    font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.7); font-weight: 700;
+}
+.seller-hero__title { font-size: 1.5rem; font-weight: 700; margin: 0.35rem 0 0.4rem; position: relative; }
+.seller-hero__subtitle { font-size: 0.88rem; color: rgba(255, 255, 255, 0.85); margin-bottom: 1.25rem; position: relative; }
+.seller-hero__actions { display: flex; gap: 0.75rem; position: relative; flex-wrap: wrap; }
+.seller-hero__btn { border: none; }
+.seller-hero__btn--primary { background: rgba(255, 255, 255, 0.16); color: #fff; }
+.seller-hero__btn--primary:hover { background: rgba(255, 255, 255, 0.26); }
+.seller-hero__btn--ghost { background: transparent; color: #fff; border: 1px solid rgba(255, 255, 255, 0.4); }
+.seller-hero__btn--ghost:hover { background: rgba(255, 255, 255, 0.12); }
+
+/* ===== STAT CARD ICON VARIANTS ===== */
+.admin-stat-card__icon--success { background: #f0fdf4; color: #16a34a; }
+.admin-stat-card__icon--danger { background: #fef2f2; color: #dc2626; }
+.admin-stat-card__icon--warning { background: #fffbeb; color: #b45309; }
+
+/* ===== TIMELINE DOT VARIANTS (dipakai seller) ===== */
+.admin-timeline__dot--success { background: #16a34a; }
+.admin-timeline__dot--warning { background: #d97706; }
+.admin-timeline__dot--muted { background: #9ca3af; }
+
+/* ===== SELLER INFO PANEL ===== */
+.seller-info { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; }
+.seller-info__logo { width: 48px; height: 48px; border-radius: 10px; object-fit: cover; }
+.seller-info__body { display: flex; flex-direction: column; }
+.seller-info__name { font-size: 0.9rem; font-weight: 700; color: #111827; }
+.seller-info__owner { font-size: 0.78rem; color: #9ca3af; }
+.seller-info__details { display: flex; flex-direction: column; gap: 0.6rem; margin-bottom: 1.1rem; }
+.seller-info__row { display: flex; flex-direction: column; }
+.seller-info__label { font-size: 0.72rem; color: #9ca3af; }
+.seller-info__value { font-size: 0.83rem; color: #374151; }

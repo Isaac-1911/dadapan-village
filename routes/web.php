@@ -12,6 +12,7 @@ use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\ProductCategoryController;
 use App\Http\Controllers\Admin\SellerController;
 use App\Http\Controllers\Admin\UserController;
+use ProductCont
 
 Route::get('/', function () {
     return view('welcome');

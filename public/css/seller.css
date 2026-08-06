@@ -1,0 +1,23 @@
+/* ===== SELLER: BRAND SUBTITLE ACCENT ===== */
+.admin-sidebar__brand-subtitle--accent { color: var(--admin-primary); font-weight: 600; }
+.admin-sidebar__logo svg { width: 20px; height: 20px; }
+
+/* ===== SELLER: TOPBAR PAGE TITLE (pengganti breadcrumb) ===== */
+.admin-topbar__page-title { font-size: 1rem; font-weight: 700; color: #111827; }
+
+/* ===== SELLER: PROFILE CARD DI SIDEBAR FOOTER ===== */
+.admin-sidebar__profile-card {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.6rem;
+    border-radius: 10px;
+    background: #f8fafc;
+    margin-bottom: 0.6rem;
+}
+.admin-sidebar__profile-info { display: flex; flex-direction: column; line-height: 1.25; overflow: hidden; }
+.admin-sidebar__profile-name {
+    font-size: 0.8rem; font-weight: 600; color: #111827;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.admin-sidebar__profile-role { font-size: 0.7rem; color: #9ca3af; }
