@@ -12,7 +12,7 @@ use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\ProductCategoryController;
 use App\Http\Controllers\Admin\SellerController;
 use App\Http\Controllers\Admin\UserController;
-use ProductCont
+use App\Http\Controllers\Seller\ProductController as SellerProductController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -38,7 +38,7 @@ Route::middleware(['auth', 'role:admin'])
     ->prefix('admin')
     ->name('admin.')
     ->group(function () {
-        Route::get('/', fn () => redirect('dashboard'));
+        Route::get('/', fn() => redirect('dashboard'));
         Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('dashboard');
         Route::resource('news', NewsController::class)->except(['show', 'edit']);
         Route::resource('news-categories', NewsCategoryController::class)->except(['show', 'edit']);
@@ -51,7 +51,7 @@ Route::middleware(['auth', 'role:admin'])
         Route::resource('sellers', SellerController::class)->except(['show', 'edit']);
         Route::patch('sellers/{seller}/toggle-status', [SellerController::class, 'toggleStatus'])->name('sellers.toggle-status');
 
-        Route::resource('users', UserController::class)->except(['show','edit']);
+        Route::resource('users', UserController::class)->except(['show', 'edit']);
         Route::patch('users/{user}/toggle-status', [UserController::class, 'toggleStatus'])->name('users.toggle-status');
     });
 
@@ -66,6 +66,9 @@ Route::middleware(['auth', 'role:seller'])
         Route::post('/profile', [SellerProfileController::class, 'store'])->name('profile.store');
         Route::get('/profile/edit', [SellerProfileController::class, 'edit'])->name('profile.edit');
         Route::put('/profile', [SellerProfileController::class, 'update'])->name('profile.update');
+
+        Route::resource('products', SellerProductController::class)->except(['show', 'edit']);
+        Route::delete('products/{product}/images/{image}', [SellerProductController::class, 'destroyImage'])->name('products.images.destroy');
     });
 
 require __DIR__ . '/auth.php';

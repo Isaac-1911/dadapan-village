@@ -18,9 +18,7 @@
                 <span class="admin-sidebar__brand-subtitle admin-sidebar__brand-subtitle--accent">Portal UMKM</span>
             </span>
         </a>
-        {{-- <button type="button" id="sidebar-collapse-toggle" class="admin-sidebar__toggle" aria-label="Ciutkan sidebar">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5" /></svg>
-        </button> --}}
+        {{--   --}}
     </div>
 
     <nav class="admin-sidebar__nav">
